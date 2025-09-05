@@ -74,7 +74,7 @@ const loginUser = async (req, res) => {
       sameSite: "strict",
     });
 
-    res.status(200), json({ message: "Logged in successfully" });
+    res.status(200).json({ message: "Logged in successfully" });
   } catch (error) {
     console.error("Login Error: ", error);
     res.status(500).json({ message: "Server error during login." });
